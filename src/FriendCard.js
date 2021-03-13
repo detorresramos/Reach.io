@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import { Card } from "antd";
+import { Avatar, Image} from 'antd';
 export { FriendCard }
 
 
 function FriendCard(props) {
     return(
-        <View>
-            <Avatar alt={props.name} src="images/profile-pic.png" />
-            <>
-                <h1>{props.name}</h1>
-            </>
+        <>
+            <Avatar src="./images/profile-pic.png" />
             <p> Click on an emoji to view the emoji short name </p>
-        </View>
+        </>
     )
 }
