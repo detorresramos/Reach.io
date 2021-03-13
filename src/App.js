@@ -18,7 +18,7 @@ function App() {
         >
           Learn React
         </a>
-        < FriendComponent />
+        < FriendCard />
       </header>
     </div>
   );
