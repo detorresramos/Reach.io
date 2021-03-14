@@ -8,9 +8,11 @@ Reach.io is an intimate environment where users feel truly connected, heard, and
 ## Key Ideas
 * The platform should be invite only for maintaining close, intentional friendships
 * The app should keep tabs on key wellness metrics to forecast wellbeing and take action before negative feelings spiral out of control
-* It should provide meaningful and intimate means of communication - no posts or endless recommended feeds
+* It should provide meaningful and intimate means of communication - no posts or endless recommendation feeds
 
 ## Features
+
+## Future Improvements
 
 
 
