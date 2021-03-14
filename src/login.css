@@ -22,13 +22,10 @@
     background-color: #161719;
     font-weight: bold;
     height: 35%;
-}
-
-.input, textarea {
-    color: #FCFCFF;
+    color: #FFF;
 }
 
 .btn {
     background-color: #6360FF;
-    color: #FCFCFF;
+    color: #FFF;
 }
