@@ -1,5 +1,6 @@
-import React from 'react'
-import './profile.css'
+import React from 'react';
+import './profile.css';
+import BottomNav from './BottomNav';
 
 function Profile() {
     return (
@@ -15,6 +16,7 @@ function Profile() {
                 <p>Wellness Tips</p>
                 <p>Sign Out</p>
             </div>
+            <BottomNav/>
         </div>
     )
 }

@@ -1,15 +1,19 @@
 import React from 'react';
 // import { Avatar, Card, Button} from 'antd';
 import { makeStyles} from '@material-ui/core/styles';
-import { Card, CardActions, Button} from '@material-ui/core';
+import { Card, CardActions, Button, Divider} from '@material-ui/core';
 import CardMedia from '@material-ui/core/CardMedia';
 import axios from 'axios';
 export { FriendCard }
   
+const PRIMARYCOLOR = "#6360FF";
+const SECONDARYCOLOR = "#FF8181"
+
+
   const useStyles = makeStyles((theme) => ({
     root: {
       display: 'flex',
-      alignItems: 'center',
+      alignItems: 'flex-start',
       padding: '2vh',
     },
     avatar: {
@@ -17,7 +21,7 @@ export { FriendCard }
     },
     username: {
         padding: '10px',
-        marginLeft: '10px'
+        marginLeft: '5vh'
     },
     headerArea: {
         display: 'flex',
@@ -28,6 +32,10 @@ export { FriendCard }
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'row'        
+    },
+    actions: {
+        display: 'flex',
+        flexDirection: 'column',
     }
   }));
 
@@ -54,12 +62,13 @@ function FriendCard() {
                     <h1>Luis</h1>
                 </div>
                 <CardActions className={styles.actions}>
-                    <Button size="small" color="primary" onClick={complimentHandler}>
-                        Compliment
-                    </Button>
-                    <Button size="small" color="primary">
-                        Call
-                    </Button>
+                        <Button size="medium" variant="contained" styles={{color: PRIMARYCOLOR}} onClick={complimentHandler}>
+                            Compliment
+                        </Button>
+                        <Divider/>
+                        <Button size="medium" variant="contained" styles={{color: SECONDARYCOLOR}}>
+                            Call
+                        </Button>
                 </CardActions> 
             </Card>
         </div>
