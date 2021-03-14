@@ -11,7 +11,6 @@ export { FriendCard }
       display: 'flex',
       alignItems: 'center',
       padding: '2vh',
-      boxShadow: '5px 5px 5px #9E9E9E'
     },
     avatar: {
         padding: '5vh'
@@ -47,26 +46,22 @@ function FriendCard(props) {
     return(
         <div>
             <Card className={styles.root}>
-                <span styles={styles.headerArea}>
-                    <CardMedia
-                        className={styles.avatar}
-                        image="/images/profile-pic.png"
-                        title="Live from space album cover"
-                    />
-                    <div className="userName" styles={styles.username}>
-                        <h1>Luis</h1>
-                    </div>
-                </span>
-                <span styles={styles.actionArea}>
-                    <CardActions className={styles.actions}>
-                        <Button size="small" color="primary" onClick={complimentHandler}>
-                            Compliment
-                        </Button>
-                        <Button size="small" color="primary">
-                            Call
-                        </Button>
-                    </CardActions> 
-                </span>
+                <CardMedia
+                    className={styles.avatar}
+                    image="/images/profile-pic.png"
+                    title="Live from space album cover"
+                />
+                <div className="userName" styles={styles.username}>
+                    <h1>Luis</h1>
+                </div>
+                <CardActions className={styles.actions}>
+                    <Button size="small" color="primary" onClick={complimentHandler}>
+                        Compliment
+                    </Button>
+                    <Button size="small" color="primary">
+                        Call
+                    </Button>
+                </CardActions> 
             </Card>
         </div>
     )
