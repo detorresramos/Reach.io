@@ -1,0 +1,34 @@
+.login-page {
+    color: #FCFCFF;
+}
+
+.login-message {
+    padding: 15% 0;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.login {
+    background-color: #161719;
+    border-radius: 10px;
+    padding: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+}
+
+.form-control {
+    background-color: #161719;
+    font-weight: bold;
+    height: 35%;
+}
+
+.input, textarea {
+    color: #FCFCFF;
+}
+
+.btn {
+    background-color: #6360FF;
+    color: #FCFCFF;
+}

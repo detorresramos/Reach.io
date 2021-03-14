@@ -1,8 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import { FriendCard } from './FriendCard.js';
-import LoginPage from './LoginPage.js';
-
+import Login from './Login.js';
 import {
   Route,
   Switch,
@@ -16,9 +14,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <LoginPage />
-        <FriendCard />
+        <Login />
+        {/* <FriendCard /> */}
 
 
       </header>
