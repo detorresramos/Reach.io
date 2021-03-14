@@ -34,12 +34,11 @@ export { FriendCard }
 const complimentHandler = function() {
     axios.get('http://insultgenerator.apiblueprint.org/compliments')
         .then((response) => {
-            // response = response[0].compliments;
             console.log(response[0].compliments[0]);
         });
 }
 
-function FriendCard(props) {
+function FriendCard() {
 
     const styles = useStyles();
 
