@@ -10,7 +10,7 @@ const PRIMARYCOLOR = "#6360FF";
 const SECONDARYCOLOR = "#FF8181"
 
 
-  const useStyles = makeStyles((theme) => ({
+  const useStyles = makeStyles(() => ({
     root: {
       display: 'flex',
       alignItems: 'flex-start',
@@ -62,13 +62,13 @@ function FriendCard() {
                     <h1>Luis</h1>
                 </div>
                 <CardActions className={styles.actions}>
-                        <Button size="medium" variant="contained" styles={{color: PRIMARYCOLOR}} onClick={complimentHandler}>
-                            Compliment
-                        </Button>
-                        <Divider/>
-                        <Button size="medium" variant="contained" styles={{color: SECONDARYCOLOR}}>
-                            Call
-                        </Button>
+                    <Button size="medium" variant="contained" styles={{color: PRIMARYCOLOR}} onClick={complimentHandler}>
+                        Compliment
+                    </Button>
+                    <Divider/>
+                    <Button size="medium" variant="contained" styles={{color: SECONDARYCOLOR}}>
+                        Call
+                    </Button>
                 </CardActions> 
             </Card>
         </div>
