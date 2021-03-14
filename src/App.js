@@ -1,7 +1,8 @@
 import './App.css';
 import Feed from './views/Feed.js'
 import Login from './Login.js';
-import Profile from './Profile';
+import Profile from './Profile.js';
+import Messages from './Messages.js';
 import {
   Route,
   Switch,
@@ -22,6 +23,7 @@ function App() {
             <Route path="/" exact component={Login}/>
             <Route path="/feed" component={Feed}/>
             <Route path="/profile" component={Profile}/>
+            <Route path="/messages" component={Messages}/>
           </Switch>
         </Router>
       </header>

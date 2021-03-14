@@ -6,22 +6,21 @@ import BottomNav from '../BottomNav.js';
 import Questionnaire from '../Questionnaire.js';
 import axios from 'axios'
 
-var body = JSON.stringify({
-    collection: "Users",
-    database: "MongoDB"
-})
-let data = fetch('http://localhost:5001/mongodb?email=' + localStorage.getItem("email"), {
-    method: 'GET',
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': "*",
-        'Access-Control-Allow-Headers': 'Content-Type'
-    },
-    body: body,
-}).then(response => response.json())
+async function getUsers() {
+    let data = await fetch('http://localhost:5001/mongodbusers', {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': "*",
+            'Access-Control-Allow-Headers': 'Content-Type'
+        },
+    })
+    // .then(response => response.json())
 
-console.log(data)
+    console.log(data)
+}
+getUsers()
 
 const users = [
     {

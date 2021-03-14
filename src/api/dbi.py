@@ -12,8 +12,15 @@ class MongoDBI:
         self.collection = cursor[collection]
         self.data = data
         
-    def read(self):
-        documents = self.collection.find()
+    def read_users(self):
+        documents = self.client["MongoDM"]["Users"].find()
+        output = []
+        for data in documents:
+            output.append({i: data[i] for i in data if i != '_id'})
+        return output
+    
+    def read_messages(self):
+        documents = self.client["MongoDM"]["Messages"].find()
         output = []
         for data in documents:
             output.append({i: data[i] for i in data if i != '_id'})
