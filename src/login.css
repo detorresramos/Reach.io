@@ -15,6 +15,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    min-width: 200px;
     width: 35%;
 }
 
@@ -26,6 +27,6 @@
 }
 
 .btn {
-    background-color: #6360FF;
+    background-color: #FF8181;
     color: #FFF;
 }
