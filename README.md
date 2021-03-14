@@ -1,4 +1,4 @@
-# Feel reached at a time when people need it most
+# Feel reached at a time when we need it most
 
 Social media feels empty and superficial. It feigns connection and causes feelings of anxiety, depression, isolation, and more. 
 And the Covid-19 Pandemic has certainly not helped, causing us to feel more alone than ever. Thus we find it necessary to leverage modern tools to remedy this general sentiment. 
