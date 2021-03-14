@@ -1,7 +1,7 @@
 # Feel reached at a time when people need it most
 
 Social media feels empty and superficial. It feigns connection and causes feelings of anxiety, depression, isolation, and more. 
-And the Covid-19 Pandemic has significantly exacerbated these problems in the general populace, causing us to feel more alone than ever. Thus we find it necessary to leverage modern tools to remedy this general sentiment. 
+And the Covid-19 Pandemic has certainly not helped, causing us to feel more alone than ever. Thus we find it necessary to leverage modern tools to remedy this general sentiment. 
 
 Reach.io is an intimate environment where users feel truly connected, heard, and reached. 
 
