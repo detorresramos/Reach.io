@@ -20,6 +20,7 @@ function App() {
       <header className="App-header">
         <Router>
           <Switch>
+            {/* <Route path="/video" component={Video} */}
             <Route path="/" exact component={Login}/>
             <Route path="/feed" component={Feed}/>
             <Route path="/profile" component={Profile}/>
