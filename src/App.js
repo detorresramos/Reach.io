@@ -8,10 +8,15 @@ import {
   BrowserRouter as Router,
   Redirect
 } from 'react-router-dom'
+import { useEffect } from 'react';
 // import users from './usersJSON.json'
 // import Feed from './views/Feed.js'
 
 function App() {
+  // useEffect(() => {
+  //   fetch("http://localhost:5001/mongodb", {mode: "no-cors"}).then(r => r.text()).catch(e => e)
+  // }, [])
+
   return (
     <div className="App">
       <header className="App-header">
