@@ -21,6 +21,7 @@ def base():
 @app.route('/mongodb', methods=['GET'])
 def mongo_read():
     data = request.json
+    print(data)
     if data is None or data == {}:
         return error(400, "Include DB data in request body.")
     
