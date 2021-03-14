@@ -15,12 +15,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Router>
-          <Route path="/" exact component={App}/>
-          <Route path="/feed" component={Feed}/>
-          <Redirect to="/"/>
-          {/* <Route path="/about" component={About}/> */}
-        </Router>
+
+        < FriendCard/>
 
 
       </header>
