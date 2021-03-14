@@ -35,6 +35,8 @@ function Login() {
             },
             body: body,
         })
+        localStorage.setItem('name', name);
+        localStorage.setItem('email', email);
     }
 
     return (
@@ -59,7 +61,7 @@ function Login() {
                     />
                     </Form.Group>
                     <Button block size="lg" type="submit" onClick={() => handleClick()} disabled={!validateForm()}>
-                    Login/Signup
+                    Join
                     </Button>
                 </Form>
             </div>

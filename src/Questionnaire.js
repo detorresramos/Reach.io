@@ -30,12 +30,12 @@ export default function Questionnaire(props) {
                 <span>
                 <Grid 
                     container 
-                    direction="column"
+                    direction="row"
                     alignItems="center">
                     {emojis.map((es, idx) => {
                         return (
                         <span styles={{flex: 1, flexDirection: "row"}}>
-                            <Grid container direction="row">
+                            <Grid container direction="row" style={{width: '35%'}}>
                                 <Grid item xs={2}>
                                     <Fab 
                                         style={{fontSize: "50px", backgroundColor: "white", textAlign: "justify"}} onClick={() => handleEmojiClick(idx)}>
