@@ -25,7 +25,7 @@ function Login() {
             collection: "Users",
             database: "MongoDB"
         })
-        fetch('http://localhost:5001/mongodb', {
+        fetch('http://reach-flask-backend.herokuapp.com/mongodb', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
