@@ -5,6 +5,22 @@ import { makeStyles} from '@material-ui/core/styles';
 import BottomNav from '../BottomNav.js';
 import Questionnaire from '../Questionnaire.js';
 
+// async function getUsers() {
+//     let data = await fetch('http://reach-flask-backend.herokuapp.com/mongodbusers', {
+//         method: 'GET',
+//         headers: {
+//             'Accept': 'application/json',
+//             'Content-Type': 'application/json',
+//             'Access-Control-Allow-Origin': "*",
+//             'Access-Control-Allow-Headers': 'Content-Type'
+//         },
+//     })
+//     // .then(response => response.json())
+
+//     console.log(data)
+// }
+// getUsers()
+
 const users = [
     {
         "name": "Luis",

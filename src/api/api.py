@@ -21,15 +21,32 @@ def base():
         mimetype='application/json'
     )
 
-@app.route('/mongodb', methods=['GET'])
+@app.route('/mongodbusers', methods=['GET'])
 @cross_origin()
-def mongo_read():
+def mongo_read_users():
+    data = request.json
+    print(data)
+
+    if data is None or data == {}:
+        return error(400, "Include DB data in request body.")
+    
+    dbi = MongoDBI(data)
+    response = dbi.read_users()
+    return Response(
+        response=json.dumps(response),
+        status=200,
+        mimetype='application/json'
+    )
+
+@app.route('/mongodbmessages', methods=['GET'])
+@cross_origin()
+def mongo_read_messages():
     data = request.json
     if data is None or data == {}:
         return error(400, "Include DB data in request body.")
     
     dbi = MongoDBI(data)
-    response = dbi.read()
+    response = dbi.read_messages()
     return Response(
         response=json.dumps(response),
         status=200,
