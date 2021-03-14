@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './login.css'
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { Link } from 'react-router-dom';
 
 function Login() {
 
@@ -37,6 +38,7 @@ function Login() {
         })
         localStorage.setItem('name', name);
         localStorage.setItem('email', email);
+
     }
 
     return (
@@ -60,9 +62,9 @@ function Login() {
                         onChange={(e) => setEmail(e.target.value)}
                     />
                     </Form.Group>
-                    <Button block size="lg" type="submit" onClick={() => handleClick()} disabled={!validateForm()}>
+                    <Link to={location => ({ ...location, pathname: "/feed" })}><Button block size="lg" type="submit" onClick={() => handleClick()} disabled={!validateForm()}>
                     Join
-                    </Button>
+                    </Button></Link>
                 </Form>
             </div>
         </div>

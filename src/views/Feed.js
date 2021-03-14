@@ -4,6 +4,24 @@ import { Box } from '@material-ui/core';
 import { makeStyles} from '@material-ui/core/styles';
 import BottomNav from '../BottomNav.js';
 import Questionnaire from '../Questionnaire.js';
+import axios from 'axios'
+
+var body = JSON.stringify({
+    collection: "Users",
+    database: "MongoDB"
+})
+let data = fetch('http://localhost:5001/mongodb?email=' + localStorage.getItem("email"), {
+    method: 'GET',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': "*",
+        'Access-Control-Allow-Headers': 'Content-Type'
+    },
+    body: body,
+}).then(response => response.json())
+
+console.log(data)
 
 const users = [
     {
