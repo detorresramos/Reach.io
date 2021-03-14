@@ -3,10 +3,11 @@ import './App.css'
 import { createOffer, initiateConnection, startCall, sendAnswer, addCandidate, initiateLocalStream, listenToConnectionEvents } from './modules/RTCModule'
 import firebase from 'firebase/app'
 import 'firebase/database'
-import config from './config'
+import config from './config.js'
 import { doOffer, doAnswer, doLogin, doCandidate } from './modules/FirebaseModule'
 import 'webrtc-adapter'
 import VideoChat from './VideoChat'
+import BottomNav from './BottomNav'
 
 class VideoChatContainer extends React.Component {
   constructor (props) {
@@ -22,7 +23,7 @@ class VideoChatContainer extends React.Component {
   }
 
     componentDidMount = async () => {
-      firebase.initializeApp(config)
+      // firebase.initializeApp(config)
 
       // getting local video stream
       const localStream = await initiateLocalStream()
@@ -31,36 +32,35 @@ class VideoChatContainer extends React.Component {
       const localConnection = await initiateConnection()
 
       this.setState({
-        database: firebase.database(),
+        // database: firebase.database(),
         localStream,
         localConnection
       })
     }
 
-    shouldComponentUpdate (nextProps, nextState) {
-      if (this.state.database !== nextState.database) {
-        return false
-      }
-      if (this.state.localStream !== nextState.localStream) {
-        return false
-      }
-      if (this.state.localConnection !== nextState.localConnection) {
-        return false
-      }
+    // shouldComponentUpdate (nextProps, nextState) {
+    //   if (this.state.database !== nextState.database) {
+    //     return false
+    //   }
+    //   if (this.state.localStream !== nextState.localStream) {
+    //     return false
+    //   }
+    //   if (this.state.localConnection !== nextState.localConnection) {
+    //     return false
+    //   }
 
-      return true
-    }
+    //   return true
+    // }
 
     startCall = async (username, userToCall) => {
       const { localConnection, database, localStream } = this.state
       listenToConnectionEvents(localConnection, username, userToCall, database, this.remoteVideoRef, doCandidate)
-      // create an offer
       createOffer(localConnection, localStream, userToCall, doOffer, database, username)
     }
 
-    onLogin = async (username) => {
-      return await doLogin(username, this.state.database, this.handleUpdate)
-    }
+    // onLogin = async (username) => {
+    //   return await doLogin(username, this.state.database, this.handleUpdate)
+    // }
 
     setLocalVideoRef = ref => {
       this.localVideoRef = ref
@@ -100,13 +100,18 @@ class VideoChatContainer extends React.Component {
     }
 
     render () {
-      return <VideoChat
-        startCall={this.startCall}
-        onLogin={this.onLogin}
-        setLocalVideoRef={this.setLocalVideoRef}
-        setRemoteVideoRef={this.setRemoteVideoRef}
-        connectedUser={this.state.connectedUser}
-      />
+      return(
+      <div styles={{display: "flex", maxWidth:"50px"}}>
+        <VideoChat
+          startCall={this.startCall}
+          onLogin={this.onLogin}
+          setLocalVideoRef={this.setLocalVideoRef}
+          setRemoteVideoRef={this.setRemoteVideoRef}
+          connectedUser={this.state.connectedUser}
+        />
+        <BottomNav/>
+      </div>
+      )
     }
 }
 

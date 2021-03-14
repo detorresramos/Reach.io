@@ -4,6 +4,7 @@ import { makeStyles} from '@material-ui/core/styles';
 import { Card, CardActions, Button, Divider} from '@material-ui/core';
 import CardMedia from '@material-ui/core/CardMedia';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 export { FriendCard }
   
 const PRIMARYCOLOR = "#6360FF";
@@ -66,9 +67,11 @@ function FriendCard() {
                         Compliment
                     </Button>
                     <Divider/>
-                    <Button size="medium" variant="contained" styles={{color: SECONDARYCOLOR}}>
-                        Call
-                    </Button>
+                    <Link to="/video">
+                        <Button size="medium" variant="contained" styles={{color: SECONDARYCOLOR}}>
+                                Call
+                        </Button>
+                    </Link>
                 </CardActions> 
             </Card>
         </div>

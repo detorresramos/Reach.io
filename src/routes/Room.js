@@ -42,7 +42,6 @@ const Room = (props) => {
     }
 
     function createPeer(userID) {
-        // {console.log("CREATING peer")}
         const peer = new RTCPeerConnection({
             iceServers: [
                 {
